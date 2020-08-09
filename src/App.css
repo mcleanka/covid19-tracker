@@ -1,38 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f6f6;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 10px !important;
+}
+
+.App__left {
+  flex: 0.9;
+}
+
+.App__header {
+  color: #cc1834;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.App__infoBox {
+  flex: 1;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.App__infoBox--selected {
+  border-top: 10px solid #637433;
+}
+
+.App__infoBox--red {
+  border-color: red;
+}
+
+.App__infoBox__green {
+  color: lightgreen !important;
+}
+.App__infoBox:not(:last-child) {
+  margin-right: 15px;
+}
+
+.App__infoBox__cases {
+  color: #cc1834;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.App__infoBox__total {
+  color: #6c757d;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+.App__table {
+  margin-top: 20px;
+  overflow: scroll;
+  height: 400px;
+  color: #6a5d5d;
+}
+
+.App__table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.App__table td {
+  padding: 0.5rem;
+}
+
+.App__table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+.App__map {
+  height: 500px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 16px;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.App__map .leaflet-container {
+  height: 100%;
+}
+
+.App__map__info__container {
+  width: 150px;
+}
+
+.App__map__info__flag {
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.App__map__info__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.App__map__info__confirmed,
+.App__map__info__revovered,
+.App__map__info__deaths,
+.App__map__info__active {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.App__map__info__flag img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.App__dropdown {
+  background: #fff !important;
+}
+
+.App__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+  .App {
+    flex-direction: column;
   }
 }
