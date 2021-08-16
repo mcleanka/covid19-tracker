@@ -110,7 +110,7 @@ body {
 }
 
 .App__map__info__confirmed,
-.App__map__info__revovered,
+.App__map__info__recovered,
 .App__map__info__deaths,
 .App__map__info__active {
   font-size: 16px;
